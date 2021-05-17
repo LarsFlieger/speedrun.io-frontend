@@ -7,7 +7,7 @@ const MapList = () => {
 
     useEffect(() => {
         const fetchMaps = async () => {
-            const result = await fetch('https//api.speedrun.io/v1/maps')
+            const result = await fetch('https://api.speedrun.io/v1/maps')
             const body = await result.json()
             setMaps(body)
         }

@@ -5,7 +5,7 @@ import useToken from '../customHooks/useToken'
 
 // TODO: Move to useEffects
 async function loginUser(credentials) {
-    let response = await fetch('https//api.speedrun.io/v1/auth/login', {
+    let response = await fetch('https://api.speedrun.io/v1/auth/login', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'

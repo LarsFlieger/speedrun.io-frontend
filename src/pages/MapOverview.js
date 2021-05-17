@@ -7,7 +7,7 @@ const MapOverview = ({ match }) => {
 
     useEffect(() => {
         const fetchMap = async () => {
-            const result = await fetch(`https//api.speedrun.io/v1/maps/frontend/${id}`)
+            const result = await fetch(`https://api.speedrun.io/v1/maps/frontend/${id}`)
             const body = await result.json()
             setMap(body[0])
             console.log("map", mapRef.current)
