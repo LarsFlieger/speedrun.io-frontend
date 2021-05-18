@@ -28,26 +28,29 @@ import PrivateRoute from './components/PrivateRoute'
 import useToken from './customHooks/useToken'
 
 const App = () => {
-    const {token, setToken} = useToken()
+    const { token, setToken } = useToken()
     console.log("token", token)
 
     return (
         <div>
             <Router>
-            <NavBar />
+                <NavBar />
                 <Switch>
-                    <Route path="/leaderboard" component={Leaderboard}/>
-                    <Route path="/game" component={Game}/>
-                    <PrivateRoute path="/profile" component={Profile}/>
+                    <Route path="/leaderboard" component={Leaderboard} />
+                    <Route path="/game" component={() => {
+                        window.open('/game.html', '_blank');
+                        return null;
+                    }} />
+                    <PrivateRoute path="/profile" component={Profile} />
                     <Route path="/maps" component={Maps} />
                     <Route path="/map/:id" component={MapOverview} />
                     <Route path="/register" component={Register} />
-                    <Route path="/login" component={Login}/>
+                    <Route path="/login" component={Login} />
                     <Route path="/error" component={Error} />
                     <Route path="/" component={Index} exact />
                     <Route component={Error} />
                 </Switch>
-            <Footer />
+                <Footer />
             </Router>
         </div>
     )
