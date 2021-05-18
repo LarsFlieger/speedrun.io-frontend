@@ -1,7 +1,33 @@
-<meta charset="UTF-8">
-<title>Testing</title>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="speedrun.io" />
+    <title>speedrun.io Game</title>
+    <style>
+        * {
+            margin: 0
+        }
+        body {
+            background-color: #050812;
+        }
+    </style>
+    <script src="dist/bundle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD5SMGD9M8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-<script>
-    console.log(localStorage.getItem('token'))
-</script>
+        gtag('config', 'G-GD5SMGD9M8');
+    </script>
+
+</head>
+
+<body>
+    <div id="game"></div>
+</body>
+
+</html>
